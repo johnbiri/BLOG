@@ -1,0 +1,123 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	color: #fff;
+	font-family: monospace;
+}
+
+html{
+	scroll-behavior: smooth;
+}
+
+body{
+	height: 100vh;
+	background-color: #000;
+}
+
+
+
+
+
+
+
+/* formatação de parágrafos */
+.texto00{
+	color: #999;
+}
+.texto01{
+	color: #35fc03;
+	font-size: 14px;
+}
+.texto02{
+	color: #ff0;
+	text-decoration: underline;
+}
+.texto03{
+	color: #fff;
+}
+.texto04{
+	color: #d5d5d5;
+}
+/* Texto onde estão as logos */
+.texto05{
+	color: #d5d5d5;
+	font-size: 25px;
+}
+/* formatação de divs */
+.div00{
+	border: 1px, solid, #a300c8;
+	padding: 20px;
+	margin: 20px;
+	margin-right: 400px;
+	margin-left: 400px;
+}
+
+
+
+
+
+
+/* formatação de Links */
+.link00{
+	color: #a300c8;
+	text-decoration: none;
+}
+.link00:hover{
+	color: #a300c8;
+	text-decoration: underline;
+}
+
+
+
+
+
+
+
+/* Imagens */
+.img01{
+	margin-right: 8px;
+	padding: 0px;
+	width: 100px;}
+.icon {
+    width: 20px;
+    height: 20px;
+    vertical-align: middle; /* Alinha o ícone com o texto */
+    margin-left: 5px; /* Espaçamento entre o texto e o ícone */
+}
+
+
+
+
+
+/* Rodapé */
+footer {
+    border: 1px, solid, #a300c8;
+    padding: 20px;
+	margin: 20px;
+	margin-right: 400px;
+	margin-left: 400px;
+    text-align: center;
+    font-size: 15px;
+}
+
+
+
+
+
+
+
+
+
+/* Estilos específicos para telas menores (tablets e celulares) */
+@media (max-width: 768px) {
+   	.div00{
+	padding: 10px;
+	margin: 10px;
+}
+	footer {
+    padding: 20px;
+	margin: 10px;
+}
+    
+}
