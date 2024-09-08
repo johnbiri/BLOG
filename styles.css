@@ -5,119 +5,115 @@
 	color: #fff;
 	font-family: monospace;
 }
-
 html{
 	scroll-behavior: smooth;
 }
-
 body{
-	height: 100vh;
 	background-color: #000;
+    padding: 20px;
+	margin: 5px;
+    font-size: 15px;
 }
-
-
-
-
-
-
-
+/* header */
+.header1 {
+	padding: 0px;
+	background-color: #000 ;
+}
+/* formatação de artigo */
+.secao1 {
+    border: #222 1px solid;
+}
+.artigo1 {
+    background-color: #000;
+	margin: 5px;
+	padding: 20px;
+	border-radius: 5px;
+	text-align: left;
+}
+.artigo2 {
+    background-color: #222;
+	margin: 5px;
+	padding: 20px;
+	border-radius: 5px;
+	text-align: left;
+}
 /* formatação de parágrafos */
-.texto00{
-	color: #999;
+.texto04 {
+    color: #777;
 }
-.texto01{
-	color: #35fc03;
-	font-size: 14px;
-}
-.texto02{
-	color: #ff0;
+.texto05 {
+    color: #ff0;
 	text-decoration: underline;
 }
-.texto03{
-	color: #fff;
+.texto06 {
+    color: #0f0;
 }
-.texto04{
-	color: #d5d5d5;
-}
-/* Texto onde estão as logos */
-.texto05{
-	color: #d5d5d5;
-	font-size: 25px;
-}
-/* formatação de divs */
-.div00{
-	border: 1px, solid, #a300c8;
-	padding: 20px;
-	margin: 20px;
-	margin-right: 400px;
-	margin-left: 400px;
-}
-
-
-
-
-
-
-/* formatação de Links */
-.link00{
-	color: #a300c8;
+.link00 {
+    color: #a300c8;
 	text-decoration: none;
 }
-.link00:hover{
-	color: #a300c8;
+.link00:hover {
 	text-decoration: underline;
 }
-
-
-
-
-
-
-
 /* Imagens */
 .img01{
 	margin-right: 8px;
 	padding: 0px;
 	width: 100px;}
-.icon {
-    width: 20px;
-    height: 20px;
-    vertical-align: middle; /* Alinha o ícone com o texto */
-    margin-left: 5px; /* Espaçamento entre o texto e o ícone */
+.icon1 {
+	size: 50px;
+    width: 40px;
+    height: 40px;
+    vertical-align: middle;
+    margin-left: 5px;
 }
-
-
-
-
-
-/* Rodapé */
-footer {
-    border: 1px, solid, #a300c8;
-    padding: 20px;
-	margin: 20px;
-	margin-right: 400px;
-	margin-left: 400px;
-    text-align: center;
-    font-size: 15px;
+/* footer */
+.footer1 {
+	padding: 0px;
+	background-color: #500078 ;
+	font-size: 20px;
 }
-
-
-
-
-
-
-
-
-
-/* Estilos específicos para telas menores (tablets e celulares) */
-@media (max-width: 768px) {
-   	.div00{
-	padding: 10px;
-	margin: 10px;
+/* Tela de carregamento */
+#loading-screen {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	background-color: #000;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: 9999;
+  }
+  
+  /* Spinner (animação de carregamento) */
+  .spinner {
+	border: 8px solid #500078;
+	border-top: 8px solid #a300c8;
+	border-radius: 50%;
+	width: 60px;
+	height: 60px;
+	animation: spin 1s linear infinite;
+  }
+  
+  @keyframes spin {
+	0% { transform: rotate(0deg); }
+	100% { transform: rotate(360deg); }
+  }
+  
+  /* Esconder o conteúdo da página até o carregamento completo */
+  #content {
+	display: none;
+  }
+  /* formatação de modal */
+.modal1 {
+    background-color: #000;
+	border-radius: 0px;
+	border: #500078 1px solid;
 }
-	footer {
-    padding: 20px;
-	margin: 10px;
-}
-    
+.modal2 {
+    background-color: #000;
+	border-radius: 0px;
+	border: #a300c8 1px solid;
 }

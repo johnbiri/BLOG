@@ -4,132 +4,187 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>John Biri</title>
-	<link rel="shortcut icon" href="img/01.jpg">
+	<link rel="shortcut icon" href="img/00.ico">
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 	<link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
-
-
-
-
-
-
-
-	<!-- Título, Menu, etc. -->
-	<header>
-		<center>
-			<br>
-			<h1>John Biri</h1> <br> <br>
-			<p class="texto02">
-				Última atualização 11/08/2024
-			</p>
-		</center>
+	<header class="container-fluid p-2 text-center header1">
+		<nav class="navbar navbar-expand-lg header1">
+		  <div class="container-fluid">
+		    <a class="navbar-brand" href="#"><img src="img/00.ico" alt="ico"></a>
+		    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+		      <span class="navbar-toggler-icon"></span>
+		    </button>
+		    <div class="collapse navbar-collapse justify-content-end header1" id="navbarSupportedContent">
+		      <ul class="navbar-nav">
+		        <li class="nav-item">
+		        	<a class="nav-link text-white" aria-current="page" href="#"><i class="bi bi-house icon1 fs-1"></i> Home</a>
+		        </li>
+		        <li class="nav-item">
+		        	<a class="nav-link text-white" href="#" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="bi bi-building-gear icon1 fs-1"></i> Projetos</a>
+		        </li>
+				<li class="nav-item">
+					<a class="nav-link text-white" href="#" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="bi bi-dpad icon1 fs-1"></i> Jogos</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link text-white" href="https://john-biri.github.io/portfolio/" target="_blank"><i class="bi bi-file-earmark-person icon1 fs-1"></i> Portfólio</a>
+				</li>
+				<li class="nav-item">
+				</li>
+		      </ul>
+		    </div>
+		  </div>
+		</nav>
 	</header>
-	
-
-
-
-
-
+	<!-- Tela de carregamento -->
+	<div id="loading-screen">
+	<div class="spinner"></div>
+	</div>
 	<!-- Artigo, Conteúdo -->
-	<article>
-		<div class="div00">
-			<p class="texto01">
-				Oi! Esta página está em construção, mas sinta-se à vontade para explorar e dar feedback. Obrigado pela visita e apoio!
-			</p>
-		</div>
-	</article>
-
-
-
-
-
-
-
-	<article>
-		<div class="div00">
-			<p class="texto00">
-				<img align="left" class="img01" src="img/03.jpg">
-				<b class="texto04">Gameplays do Andarilho:</b> Canal focado em Gameplays. Séries como Project Zomboid, 7 Days To Die, Rust, The Forest, Ark, Conan Exiles e mais jogos de sobrevivência, novos lançamentos e muito mais. O objetivo do canal é trazer o entretenimento para você através dos vídeos e lives. Aqui está uma <a title="Parou em 2 - (00:16:53)" class="link00" target="_blank" href="https://www.youtube.com/embed/videoseries?list=PLd9ykfMeym3jCU5tCFLXjZbMg4GY-u2EZ">playlist</a> com os últimos vídeos do canal. Outros links relacionados: <a class="link00" target="_blank" href="https://www.youtube.com/@Andarilhou/videos">Canal</a>. Tenho uma Inscrição Grupo 1 na <a class="link00" target="_blank" href="https://www.twitch.tv/andarilhoo">Twitch</a> com Benefícios de inscrição - Apoiar diretamente o streamer - Transmissões sem anúncios (com poucas exceções) - Distintivo de inscrito - Fale no chat durante o modo exclusivo para inscritos. - Não é afetado pelo modo de chat lento - 20 emotes de inscrito - 1 benefício adicional - Canais de Discord exclusivos para inscritos. Outros links:
-				<a class="link00" target="_blank" 
-				href="https://www.youtube.com/@livesdoandarilho">Canal de lives</a> /
-				<a class="link00" target="_blank" 
-				href="https://www.instant-gaming.com/pt/giveaway/andarilho">Giveway</a> /
-				<a class="link00" target="_blank" 
-				href="https://www.instagram.com/andarilhou/">Instagram</a> /
-				<a class="link00" target="_blank" 
-				href="https://discord.com/channels/302563407381528576/302563407381528576">Discord</a>. <br>
-				Se inscrever no canal do Andarilho no YouTube me mantém atualizado sobre os últimos jogos de sobrevivência. Seus vídeos oferecem análises detalhadas, gameplays envolventes e dicas valiosas que melhoram minha experiência de jogo. Além disso, ganhei o Red Dead Redemption graças a uma promoção realizada pela nova patrocinadora do canal, Instant Gaming. Isso me deu a chance de jogar um título incrível e mostrou o quanto o Andarilho valoriza seus inscritos. Em resumo, acompanhar o canal do Andarilho me mantém informado e preparado para os desafios dos jogos de sobrevivência, tornando minha experiência ainda mais emocionante e gratificante.
+	<section class="container-fluid text-center p-2 secao1">
+			<h1>John Biri</h1>
+			<article class="artigo2">
+				<div>
+					<h2><i class="bi bi-chat-left-text icon1 fs-1"></i> Atividade</h2>
+					<br>
+					<p class="texto04">
+						Eu criei e publiquei um site estático no GitHub Pages para aplicar meus conhecimentos em HTML, CSS, Bootstrap e GitHub. 
+						Primeiro, desenvolvi um site básico com uma página principal (index.html) usando meu editor de código preferido, o Visual Studio Code (VSCode). 
+						Após finalizar o site, criei um novo repositório no GitHub e o nomeei de acordo com o propósito do meu site, por exemplo, “BLOG”. Em seguida, adicionei 
+						o repositório remoto ao meu projeto com o comando git remote add origin [URL do meu repositório] e fiz o upload dos arquivos com git push origin main. 
+						Verifiquei se os arquivos foram corretamente enviados para o GitHub e ativei o GitHub Pages em Settings > Pages, selecionando a branch “main” como a 
+						fonte e clicando em “Save”. Após alguns minutos, copiei o URL fornecido pelo GitHub e testei o site em meu navegador para garantir que tudo estava funcionando 
+						como esperado. Por fim, compartilhei o URL do meu site com meus colegas de classe. Esta atividade me proporcionou uma prática valiosa na criação e publicação 
+						de sites, solidificando meus conhecimentos em desenvolvimento web e me familiarizando com ferramentas essenciais do desenvolvimento moderno.
+					</p>
+				</div>
+			</article>
+		<article class="artigo1">
+			<div class="div00">
+				<h2><i class="bi bi-controller icon1 fs-1"></i> Jogos</h2>
 				<br>
-				Setup Completo
-				<a class="link00" target="_blank" href="https://bit.ly/3BygtDQ">aqui</a>.
-				<br> <br>
-				<img align="left" class="img01" src="img/02.jpg">
-				<b class="texto04">Gameplays do MaxMRM:</b> O Canal MaxMRM GAMEPLAY é um canal dedicado ao mundo dos GAMES e feito para os gamers! 
-				Com postagens frequentes contendo dicas, gameplays, reviews, tutoriais, easter eggs e muito mais.
-				O canal está em constante evolução trazendo cada vez mais conteúdo e buscando sempre o melhor resultado audiovisual.
-				Aqui está uma 
-				<a title="Parou em 2 - (00:16:00)" class="link00" target="_blank" 
-				href="https://www.youtube.com/embed/videoseries?list=PLd9ykfMeym3iMo46vjAbQ67MMn2SeOHfx">playlist</a>
-				com os últimos vídeos do canal. Outros links relacionados:
-				<a class="link00" target="_blank" 
-				href="https://www.youtube.com/@MaxMRM/videos">Canal</a>.
-				Ser inscrito no canal do MaxMRM é como ter um guia pessoal no mundo dos jogos de terror! Ele traz análises detalhadas, gameplays envolventes e sempre está por dentro das últimas novidades. Além de ser um ótimo jogador, MaxMRM tem experiência como diretor criativo de um jogo indie, então ele sabe do que está falando! Suas dicas e insights não só melhoram nossa experiência de jogo, mas também nos fazem sentir parte de uma grande família gamer. Em resumo, o canal do MaxMRM é o lugar perfeito para ficar atualizado, se divertir e aprender mais sobre os jogos de terror, tudo com aquele toque especial que só ele tem! Desde 2016, tenho acompanhado o canal MaxMRM e assisti a todos os <b class="texto04">3.609</b> vídeos postados até hoje. Ao explorar jogos de terror indie, MaxMRM oferece visibilidade essencial para criadores independentes, destacando a importância de apoiar essas produções inovadoras e únicas.
-				 O conteúdo do Max sempre me atraiu pelo seu jeito único de apresentar e pela qualidade das análises e gameplays. É incrível como ele consegue manter o canal tão dinâmico e interessante ao longo dos anos. Estou sempre ansioso pelos novos vídeos e continuo sendo um grande fã do Max!
+				<h3>Jogos de Sobrevivência e Terror</h3>
+				<br>
+				<p class="texto04">
+					<img align="left" class="img01" src="img/01.png">
+					Minha paixão por jogos sempre foi uma força motriz na minha vida. Desde cedo, fui cativado não apenas pela diversão e desafio que eles proporcionam, mas pela capacidade 
+					que têm de contar histórias, criar mundos e envolver o jogador em experiências imersivas. Essa paixão só cresceu com o tempo, e hoje sei que quero fazer parte da criação 
+					desses universos.
+					Embora eu ainda não tenha me envolvido diretamente no desenvolvimento de jogos, meu objetivo é claro: quero criar meu próprio jogo e fazer parte de uma equipe dedicada 
+					a essa arte. Jogos como Project Zomboid e 7 Days to Die me inspiram profundamente, mostrando que um bom jogo não precisa ter os gráficos mais avançados, mas sim uma 
+					jogabilidade cativante e mecânicas bem pensadas. Eles são a prova de que é possível criar algo inovador e envolvente com os recursos certos e uma ideia sólida.
+					O que me motiva é essa possibilidade de criar algo que mexa com as pessoas da mesma forma que os jogos mexeram comigo. Trabalhar em uma equipe de desenvolvimento 
+					é uma etapa fundamental para aprender, trocar ideias e trazer novas perspectivas para o que podemos criar juntos. Mesmo sem ter me envolvido diretamente ainda, essa 
+					paixão é o que me impulsiona a seguir em frente, estudar e buscar oportunidades no mundo do desenvolvimento de jogos. <br> <br>
+					Uma ideia interessante para enriquecer a jogabilidade de 7 Days to Die e Project Zomboid seria a adição de mais interações e funcionalidades para os veículos, 
+					especialmente os de duas rodas. Em 7 Days to Die, um toque simples como a implementação de um "pezinho" para as motos e bicicletas traria um charme extra e uma 
+					sensação de realismo ao jogo. Imagine ter que estacionar adequadamente sua moto para não vê-la tombar enquanto você explora ou luta contra hordas de zumbis.
+					Além disso, a adição oficial de reboques em ambos os jogos abriria um leque de possibilidades muito interessante. No 7 Days to Die, por exemplo, os reboques poderiam 
+					ser usados para carregar grandes quantidades de recursos ou materiais de construção, permitindo ao jogador ser mais eficiente em suas explorações e projetos de base. 
+					No Project Zomboid, os reboques seriam uma excelente maneira de expandir a capacidade de transporte de suprimentos, especialmente em missões de coleta em massa, o que 
+					faria uma diferença gigantesca em termos de planejamento estratégico.
+					Outra mecânica que poderia levar os dois jogos a um novo patamar é a interação com água. Em 7 Days to Die, atualmente a água é mais um obstáculo do que um recurso. 
+					Adicionar a possibilidade de construir barcos ou até mesmo usar materiais para navegar poderia abrir novas opções de exploração e sobrevivência. Em Project Zomboid, 
+					a introdução de barcos ou travessias aquáticas permitiria ao jogador escapar de situações perigosas ou explorar áreas antes inacessíveis, aumentando a tensão e a 
+					dinâmica do jogo.
+					Essas adições não só trariam mais realismo como também diversificariam as estratégias dos jogadores, melhorando a imersão e criando novas possibilidades em mundos já 
+					ricos e complexos. <br> <br>
+					Project Zomboid e 7 Days to Die são dois exemplos perfeitos de jogos que não dependem de gráficos ultra-realistas para entregar uma experiência intensa e viciante. 
+					Ambos têm estilos gráficos mais simples, mas se destacam em outros aspectos que os tornam incrivelmente imersivos e populares.
+					Project Zomboid é um jogo de sobrevivência em um mundo aberto infestado por zumbis, onde cada decisão pode ser a diferença entre viver ou morrer. O visual é bem simples, 
+					com um estilo isométrico que lembra jogos mais antigos, mas o nível de detalhes no sistema de sobrevivência é insano. Nele, você precisa se preocupar com fome, sede, 
+					doenças, traumas psicológicos e até a construção de uma base segura para evitar ser devorado pelos mortos-vivos. A verdadeira beleza de Zomboid está na sua jogabilidade 
+					emergente, onde cada partida pode se desenrolar de uma maneira completamente diferente, baseada nas suas escolhas e nos perigos que você encontra pelo caminho. Aqui, 
+					o foco está em simulação e sobrevivência extrema, onde um erro pode ser fatal, e a imersão vem da tensão constante de estar sempre a um passo da morte.
+					Já 7 Days to Die mistura o gênero de sobrevivência com elementos de crafting e tower defense. Apesar dos gráficos não serem o ponto forte, o que realmente prende os 
+					jogadores é a dinâmica da horda de zumbis que aparece a cada sete dias, forçando você a planejar e fortificar sua base constantemente. A mecânica de construção é 
+					extremamente detalhada, permitindo que você crie verdadeiras fortalezas ou abrigos improvisados, dependendo dos recursos disponíveis. O combate contra os zumbis e 
+					a coleta de materiais são outros elementos que, junto com a pressão constante de tempo, tornam o jogo viciante. Além disso, o multiplayer de 7 Days proporciona uma 
+					experiência cooperativa única, onde jogar com amigos para sobreviver às hordas pode ser tão divertido quanto desafiador.
+					Em ambos os jogos, o que os torna especiais é a profundidade da experiência de sobrevivência e a tensão constante, provando que gráficos não são tudo. O que importa 
+					é a sensação de estar imerso em um mundo hostil e a satisfação de superar desafios brutais.
+				</p>
+				<h3>Aqui está uma lista com meus youtubers favoritos</h3>
+				<br>
+				<p class="texto04">
+					<img align="left" class="img01" src="img/03.jpg">
+					<b class="texto04">Gameplays do Andarilho:</b> Canal focado em Gameplays. Séries como Project Zomboid, 7 Days To Die, Rust, The Forest, Ark, Conan Exiles e mais jogos 
+					de sobrevivência, novos lançamentos e muito mais. O objetivo do canal é trazer o entretenimento para você através dos vídeos e lives. Aqui está uma 
+					<a title="Parou em 2 - (00:16:53)" class="link00" target="_blank" href="https://www.youtube.com/playlist?list=PLd9ykfMeym3jCU5tCFLXjZbMg4GY-u2EZ">playlist</a> 
+					com os últimos vídeos do canal. Outros links relacionados: <a class="link00" target="_blank" href="https://www.youtube.com/@Andarilhou/videos">Canal</a>. Tenho uma 
+					Inscrição Grupo 1 na <a class="link00" target="_blank" href="https://www.twitch.tv/andarilhoo">Twitch</a> com Benefícios de inscrição - Apoiar diretamente o streamer - 
+					Transmissões sem anúncios (com poucas exceções) - Distintivo de inscrito - Fale no chat durante o modo exclusivo para inscritos. - Não é afetado pelo modo de chat 
+					lento - 20 emotes de inscrito - 1 benefício adicional - Canais de Discord exclusivos para inscritos. Outros links:
+					<a class="link00" target="_blank" 
+					href="https://www.youtube.com/@livesdoandarilho">Canal de lives</a> /
+					<a class="link00" target="_blank" 
+					href="https://www.instant-gaming.com/pt/giveaway/andarilho">Giveway</a> /
+					<a class="link00" target="_blank" 
+					href="https://www.instagram.com/andarilhou/">Instagram</a> /
+					<a class="link00" target="_blank" 
+					href="https://discord.com/channels/302563407381528576/302563407381528576">Discord</a>. <br>
+					Se inscrever no canal do Andarilho no YouTube me mantém atualizado sobre os últimos jogos de sobrevivência. Seus vídeos oferecem análises detalhadas, gameplays envolventes e dicas valiosas que melhoram minha experiência de jogo. Além disso, ganhei o Red Dead Redemption graças a uma promoção realizada pela nova patrocinadora do canal, Instant Gaming. Isso me deu a chance de jogar um título incrível e mostrou o quanto o Andarilho valoriza seus inscritos. Em resumo, acompanhar o canal do Andarilho me mantém informado e preparado para os desafios dos jogos de sobrevivência, tornando minha experiência ainda mais emocionante e gratificante.
+					<br>
+					Setup Completo
+					<a class="link00" target="_blank" href="https://bit.ly/3BygtDQ">aqui</a>.
+					<br> <br>
+					<img align="left" class="img01" src="img/02.jpg">
+					<b class="texto04">Gameplays do MaxMRM:</b> O Canal MaxMRM GAMEPLAY é um canal dedicado ao mundo dos GAMES e feito para os gamers! 
+					Com postagens frequentes contendo dicas, gameplays, reviews, tutoriais, easter eggs e muito mais.
+					O canal está em constante evolução trazendo cada vez mais conteúdo e buscando sempre o melhor resultado audiovisual.
+					Aqui está uma 
+					<a title="Parou em 2 - (00:16:00)" class="link00" target="_blank" 
+					href="https://www.youtube.com/playlist?list=PLd9ykfMeym3iMo46vjAbQ67MMn2SeOHfx">playlist</a>
+					com os últimos vídeos do canal. Outros links relacionados:
+					<a class="link00" target="_blank" 
+					href="https://www.youtube.com/@MaxMRM/videos">Canal</a>.
+					Ser inscrito no canal do MaxMRM é como ter um guia pessoal no mundo dos jogos de terror! Ele traz análises detalhadas, gameplays envolventes e sempre está por dentro das últimas novidades. Além de ser um ótimo jogador, MaxMRM tem experiência como diretor criativo de um jogo indie, então ele sabe do que está falando! Suas dicas e insights não só melhoram nossa experiência de jogo, mas também nos fazem sentir parte de uma grande família gamer. Em resumo, o canal do MaxMRM é o lugar perfeito para ficar atualizado, se divertir e aprender mais sobre os jogos de terror, tudo com aquele toque especial que só ele tem! Desde 2016, tenho acompanhado o canal MaxMRM e assisti a todos os <b class="texto04">3.609</b> vídeos postados até hoje. Ao explorar jogos de terror indie, MaxMRM oferece visibilidade essencial para criadores independentes, destacando a importância de apoiar essas produções inovadoras e únicas.
+					 O conteúdo do Max sempre me atraiu pelo seu jeito único de apresentar e pela qualidade das análises e gameplays. É incrível como ele consegue manter o canal tão dinâmico e interessante ao longo dos anos. Estou sempre ansioso pelos novos vídeos e continuo sendo um grande fã do Max!
+				</p>
+			</div>
+		</article>
+		<!-- Alguns comentários para ajudar a busca -->
+		<article class="artigo2">
+			<p class="texto05">
+				Última atualização: 08 de setembro de 2024
 			</p>
-		</div>
-	</article>
-
-
-
-
-
-	<article>
-		<div class="div00">
-			<p class="texto00">
-				<img align="left" class="img01" src="img/01.png">
-				Se você é fã de jogos de sobrevivência e está em busca de uma experiência profunda e desafiadora, <strong>"Project Zomboid"</strong> é um título que você definitivamente deve conhecer. Este jogo não é apenas uma das melhores ofertas no gênero de sobrevivência; ele é uma verdadeira aula de como criar uma experiência de jogo imersiva e realista. <br> <br>
-        
-		        <strong>"Project Zomboid"</strong> se destaca por sua abordagem realista e detalhada para a sobrevivência em um mundo pós-apocalíptico. Desde o momento em que você começa a jogar, é claro que este não é apenas mais um jogo de zumbis. A profundidade do sistema de sobrevivência é impressionante: você deve gerenciar sua fome, sede, saúde mental e física, enquanto lida com a constante ameaça de zumbis e a necessidade de encontrar e manter recursos essenciais. <br> <br>
-
-		        O mundo de <strong>"Project Zomboid"</strong> é vasto e aberto, oferecendo uma grande variedade de ambientes para explorar. Cada cidade e área do jogo é meticulosamente projetada, proporcionando uma sensação autêntica de um mundo em colapso. A aleatoriedade dos eventos e a interação com o ambiente garantem que cada partida seja única, mantendo o jogo fresco e interessante a cada nova jogada. <br> <br>
-
-		        O jogo oferece uma enorme gama de opções de personalização, tanto para o seu personagem quanto para a maneira como você aborda a sobrevivência. Você pode escolher entre uma variedade de habilidades e características, o que permite que você crie um personagem que se adapte ao seu estilo de jogo. Além disso, a necessidade de planejamento estratégico para construir abrigos, administrar recursos e formar alianças (ou evitar conflitos) adiciona camadas adicionais de complexidade e engajamento. <br> <br>
-
-		        <strong>"Project Zomboid"</strong> também se beneficia de uma comunidade de jogadores dedicada e ativa. A interação com a comunidade é facilitada por fóruns, mods e atualizações regulares, que continuam a expandir e aprimorar o jogo. Os desenvolvedores estão comprometidos com a melhoria contínua do jogo, ouvindo o feedback da comunidade e adicionando novos recursos que enriquecem a experiência geral. <br> <br>
-
-		        Em resumo, <strong>"Project Zomboid"</strong> não é apenas um jogo de sobrevivência; é uma experiência imersiva que combina realismo, estratégia e exploração de maneira única. Se você está procurando um desafio real e uma profunda sensação de realização ao superar as adversidades, este jogo é uma escolha excepcional. Prepare-se para um mergulho profundo em um mundo onde a sobrevivência é a única prioridade e cada decisão conta.
+			<p class="texto06">
+				Oi! Esta página está em construção, <br>
+				mas sinta-se à vontade para explorar <br>
+				e dar feedback. Obrigado pela visita e apoio!
 			</p>
-		</div>
-	</article>
-
-
-
-
-
-
-
+		</article>
+	</section>
 	<!-- Rodapé -->
-	<footer>
-	    <p class="texto03">
-	    	<span class="icon"><i class="bi bi-c-circle"></i></span>
-	    	John Biri - 2024
-	    </p>
-	    <p class="texto05">
-	    	<br>
-	        <a href="https://www.instagram.com/johnbiri" target="_blank"><span class="icon"><i class="bi bi-instagram"></i></span></a>
-	        <a href="https://www.youtube.com/@John-Biri" target="_blank"><span class="icon"><i class="bi bi-youtube"></i></span></a>
-	        <a href="https://x.com/AnneCasmurro" target="_blank"><span class="icon"><i class="bi bi-twitter-x"></i></i></span></a>
-    	</p>
-	</footer> <br>
-
-		
-
-
-	
-	
-
-
+	<footer class="container-fluid text-center footer1">
+		<p>
+			<span class="icon"><i class="bi bi-c-circle icon1 fs-3"></i> JB 2024</span> |
+			<a href="https://www.instagram.com/johnbiri" target="_blank"><i class="bi bi-instagram icon1 fs-3"></i></a> |
+			<a href="https://www.youtube.com/@John-Biri" target="_blank"><i class="bi bi-youtube icon1 fs-3"></i></a> |
+			<a href="https://x.com/AnneCasmurro" target="_blank"><i class="bi bi-twitter-x icon1 fs-3"></i></i></a>
+		</p>
+	</footer>
+	<script src="js/loading.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+	<div class="modal-dialog">
+	  <div class="modal-content modal2">
+		<div class="modal-header modal1">
+		  <h1 class="modal-title fs-5 texto06" id="exampleModalLabel">Aviso</h1>
+		  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+		</div>
+		<div class="modal-body modal1">
+			<p class="texto06">
+				Atualmente, esta seção da página está em desenvolvimento e ainda não está disponível. Agradecemos a sua paciência e compreensão enquanto trabalhamos para aprimorá-la.
+			</p>
+		</div>
+		<div class="modal-footer modal1">
+		  <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Fechar</button>
+		</div>
+	  </div>
+	</div>
+  </div>
 </html>
