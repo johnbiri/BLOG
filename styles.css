@@ -21,19 +21,20 @@ body{
 }
 /* formatação de artigo */
 .secao1 {
-    border: #222 1px solid;
+	padding: 0px;
+    border: #000 1px solid;
 }
 .artigo1 {
     background-color: #000;
-	margin: 5px;
-	padding: 20px;
+	margin: 0px;
+	padding: 0px;
 	border-radius: 5px;
 	text-align: left;
 }
 .artigo2 {
-    background-color: #222;
-	margin: 5px;
-	padding: 20px;
+    background-color: #000;
+	margin: 0px;
+	padding-top: 100px;
 	border-radius: 5px;
 	text-align: left;
 }
@@ -70,7 +71,7 @@ body{
 /* footer */
 .footer1 {
 	padding: 0px;
-	background-color: #500078 ;
+	background-color: #000 ;
 	font-size: 20px;
 }
 /* Tela de carregamento */
