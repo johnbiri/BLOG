@@ -30,6 +30,7 @@ body{
 	padding: 0px;
 	border-radius: 5px;
 	text-align: left;
+	border-top: #666 1px solid;
 }
 .artigo2 {
     background-color: #000;
@@ -69,9 +70,14 @@ body{
     margin-left: 5px;
 }
 /* footer */
-.footer1 {
-	padding: 0px;
-	background-color: #000 ;
+.footer1{
+	padding-top: 200px;
+	padding-bottom: 50px;
+	border: #000 solid 1px;
+	background-color: #000;
+	font-size: 12px;
+}
+.footer2{
 	font-size: 20px;
 }
 /* Tela de carregamento */
