@@ -14,11 +14,6 @@ body{
 	margin: 5px;
     font-size: 15px;
 }
-/* header */
-.header1 {
-	padding: 0px;
-	background-color: #000 ;
-}
 /* formatação de artigo */
 .secao1 {
 	padding: 0px;
@@ -62,6 +57,14 @@ body{
 	margin-right: 8px;
 	padding: 0px;
 	width: 100px;}
+.img02{
+	width: 100%; 
+	max-width: 600px;
+	display: block;
+	margin: 0 auto; /* Centraliza a imagem horizontalmente */
+	max-width: 100%;
+	height: auto;
+}
 .icon1 {
 	size: 50px;
     width: 40px;
@@ -124,3 +127,89 @@ body{
 	border-radius: 0px;
 	border: #a300c8 1px solid;
 }
+.modal3 {
+    background-color: #000;
+	border-radius: 0px;
+}
+.modal-dialog {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100%;
+	height: 100%;
+	margin: 0 auto;
+  }
+  
+  .modal-content {
+	width: 90%;
+	max-width: 800px; /* Limita o tamanho no desktop */
+	background-color: #000; /* Fundo escuro para o player */
+	border-radius: 10px; /* Bordas arredondadas */
+	padding: 15px;
+	box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+  }  
+
+
+.header1 {
+	background-color: #000; /* Cor de fundo escuro do header */
+	color: white;
+	padding: 15px 0;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  }
+  
+  .navbar-toggler-icon {
+	background-color: white;
+  }
+  
+  .nav-link {
+	padding: 10px 15px;
+	color: white;
+	display: flex;
+	align-items: center;
+	transition: background-color 0.3s;
+  }
+  
+  .nav-link:hover {
+	background-color: #111; /* Cor de hover para links */
+	border-radius: 5px;
+  }
+  
+  .icon1 {
+	margin-right: 10px;
+  }
+  
+  .navbar-nav {
+	flex-direction: column;
+	justify-content: center; /* Centraliza os itens horizontalmente */
+  }
+/* carrossel */
+.carousel-indicators img{
+	width: 70px;
+	display: block;
+}
+.carousel-indicators button{
+	width: max-content!important;
+}
+.carousel-indicators{
+	position: unset;
+}
+.carousel-indicators button.active img{
+	border: #a300c8 2px solid;
+}
+.carousel-indicators button img{
+	border: #500078 2px solid;
+
+}
+/* Lista */
+.taref1{
+	border: #000 solid 1px;
+}
+.taref2{
+	background-color: #500078;
+	border: #a300c8 solid 1px;
+
+}
+  
+  
+  
+  
