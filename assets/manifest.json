@@ -1,18 +1,18 @@
 {
-  "name": "BLOG",
-  "short_name": "BLOG",
+  "name": "JB",
+  "short_name": "JB",
   "start_url": "https://johnbiri.github.io/BLOG/001.html#carousel2",
   "display": "standalone",
   "background_color": "#000000",
   "theme_color": "#000000",
   "icons": [
     {
-      "src": "https://johnbiri.github.io/BLOG/icon-192x192.png",
+      "src": "https://johnbiri.github.io/BLOG/img/ico/icon-192x192.png",
       "type": "image/png",
       "sizes": "192x192"
     },
     {
-      "src": "https://johnbiri.github.io/BLOG/icon-512x512.png",
+      "src": "https://johnbiri.github.io/BLOG/img/ico/icon-512x512.png",
       "type": "image/png",
       "sizes": "512x512"
     }
