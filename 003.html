@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>DIGITAÇÃO</title>
+    <link rel="shortcut icon" href="img/00.ico">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+	<link rel="stylesheet" type="text/css" href="assets/header.css">
+    <style>
+        .areaDigitar {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            display: flex;
+            flex-direction: column; /* Coloca os itens abaixo do outro */
+            justify-content: center; /* Centraliza horizontalmente */
+            align-items: center;     /* Centraliza verticalmente */
+            font-size: 18px;
+        }
+
+        #text-display {
+            width: 100%;
+            background-color: transparent;
+            color: #333;
+            padding: 10px;
+            text-align: center;
+        }
+
+        input {
+            width: 0px;
+            background-color: transparent;
+            color: transparent;
+            border: solid transparent 1px;
+            outline: none;
+        }
+
+        .correct {
+            color: rgb(70, 128, 70);
+        }
+
+        .incorrect {
+            color: rgb(255, 91, 91);
+        }
+
+        #stats {
+            margin-top: 90px;
+            font-size: 20px;
+        }
+
+        #reload {
+            display: none;
+        }
+
+        .nao-interativo {
+            pointer-events: none; /* Impede qualquer interação com o elemento */
+            user-select: none;    /* Impede seleção do texto */
+            cursor: default;      /* Mostra um cursor padrão sem ação */
+        }
+        .statusDig {
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+	<!-- header -->
+	<header class="container-fluid p-2 text-center header1">
+		<nav class="navbar navbar-expand-lg header1">
+			<div class="container-fluid">
+				<!-- Logo personalizada -->
+				<a class="navbar-brand" href="#">
+					<svg xmlns="http://www.w3.org/2000/svg" width="200" height="100" viewBox="0 0 200 100">
+						<rect width="200" height="100" fill="transparent" />
+						<text x="10" y="60" font-family="Arial" font-size="60" fill="#ffffff">J</text>
+						<text x="34" y="60" font-family="Arial" font-size="60" fill="#777777" font-style="italic">B</text>
+						<text x="65" y="60" font-family="Arial" font-size="20" fill="#a300c8">MyOff</text>
+					</svg>
+				</a>
+				<!-- Menu -->
+				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarNav">
+					<ul class="navbar-nav ms-auto">
+						<li class="nav-item">
+							<a class="nav-link text-white" aria-current="page" href="index.html">Home</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link text-white" href="#input">Digitação</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+	</header>
+    <!-- Tela de carregamento -->
+    <div id="loading-screen">
+        <div class="spinner"></div>
+    </div>
+    <!-- Artigo, Conteúdo -->
+	<!-- start chrome --app=file:///C:/jb/MyOff/index.html# -->
+    <section class="container-fluid text-center p-2 secao1">
+		<article class="artigo2">
+            <!-- projeto de digitação -->
+            <div id="dig" class="areaDigitar">
+
+                <input class="nao-interativo" type="text" id="input" placeholder="" autofocus spellcheck="false" autocomplete="off"/>
+
+                <button id="reload"></button>
+
+                <div class="nao-interativo" id="text-display">Loading text...</div>
+
+
+                <div id="stats">
+                    <p class="statusDig"><span style="color: gray;" id="time">60</span> - <span id="wpm">0</span></p>
+                </div>
+
+                <script>
+                    const textDisplay = document.getElementById('text-display');
+                    const inputField = document.getElementById('input');
+                    const reloadButton = document.getElementById('reload');
+                    const wpmDisplay = document.getElementById('wpm');
+                    const timeDisplay = document.getElementById('time');
+
+                    let timer = 60; // Temporizador em segundos
+                    let interval;
+                    let started = false;
+                    let correctWords = 0;
+
+                    const texts = [
+                        "if year at set can but program each keep nation long keep word hand number large keep tell after never during year at set can but program each keep nation long keep word hand number large keep tell after never during year at set can but program each keep nation long keep word hand number large keep tell after never during year at set can but program each keep nation long keep word hand number large keep tell after never during year at set can but program each keep nation long keep word hand number large keep tell after never during year at set can but program each keep nation long keep word hand number large keep tell after never during year at set can but program each keep nation long keep word hand number large keep tell after never during year at set can but program each keep nation long keep word hand number large keep tell after never during year at set can but program each keep nation long keep word hand number large keep tell after never during year at set can but program each keep nation long keep word hand number large keep tell after never during year at set can but program each keep nation long keep word hand number large keep tell after never during at set can but program each keep nation long keep word hand number large keep tell after never during year at set can but program each keep nation long keep word hand number large keep tell after never during year at set can but program each keep nation long keep word hand number large keep tell after never during year at set can but program each keep nation long keep word hand number large keep tell after never during year at set can but program each keep nation long keep word hand number large keep tell after never during year at set can but program each keep nation long keep word hand number large keep tell after never during else year at set can but program each keep nation long keep word hand number large keep tell after never during year at set can but program each keep nation long keep word hand number large keep tell after never during year at set can but program each keep nation long keep word hand number large keep tell after never during year at set can but program each keep nation long keep word hand number large keep tell after never during year at set can but program each keep nation long keep word hand number large keep tell after never during year at set can but program each keep nation long keep word hand number large keep tell after never during year at set can but program each keep nation long keep word hand number large keep tell after never during year at set can but program each keep nation long keep word hand number large keep tell after never during year at set can but program each keep nation long keep word hand number large keep tell after never during year at set can but program each keep nation long keep word hand number large keep tell after never during year at set can but program each keep nation long keep word hand number large keep tell after never during at set can but program each keep nation long keep word hand number large keep tell after never during year at set can but program each keep nation long keep word hand number large keep tell after never during year at set can but program each keep nation long keep word hand number large keep tell after never during year at set can but program each keep nation long keep word hand number large",
+                        "Across the vast landscape of history, ideas have transformed civilizations, shaping the evolution of culture, science, and innovation. Progress emerges from the relentless pursuit of knowledge, where individuals contribute their unique insights to a collective journey toward understanding. The rhythm of development is fueled by curiosity, as each discovery adds depth to our grasp of the universe’s complexity. From ancient philosophies to modern breakthroughs, the pursuit of truth remains a shared endeavor, inspiring generations to reach beyond limitations and redefine potential. Challenges along the way test resolve, encouraging resilience in the face of adversity. Through collaboration, diverse perspectives converge, strengthening approaches and unveiling possibilities. The path is seldom linear, marked instead by detours that offer unexpected opportunities to grow. Success and failure interweave, creating a rich tapestry of experience that informs strategies for the future. Communication bridges divides, allowing ideas to travel across distances and spark movements. Words hold the power to unite or divide, their impact resonating through time as they inspire revolutions, foster empathy, or reshape paradigms. In the interplay between thought and action, innovation takes root, propelled by the determination to improve the human condition. The momentum of progress requires deliberate effort, balancing creativity with discipline. Systems and structures emerge to support growth, ensuring that advancements benefit society at large. Education empowers individuals to contribute meaningfully, while ethical frameworks guide decisions to prioritize sustainability and equity. Through this balance, the achievements of today lay the groundwork for the aspirations of tomorrow. As the narrative of humanity unfolds, it becomes evident that progress is a shared legacy. Every breakthrough, every invention, and every act of kindness adds to a collective story, showcasing the resilience and ingenuity that define our species. This interconnectedness reminds us of our capacity to adapt and thrive, no matter the challenges we face. Together, as we reflect on the past and look toward the future, we are reminded that the journey is as significant as the destination. In every moment, the potential for growth and transformation awaits, inviting us to continue writing the story of what it means to be human.  potential. Challenges along the way test resolve, encouraging resilience in the face of adversity. Through collaboration, diverse perspectives converge, strengthening approaches and unveiling possibilities. The path is seldom linear, marked instead by detours that offer unexpected opportunities to grow. Success and failure interweave, creating a rich tapestry of experience that informs strategies for the future. Communication bridges divides, allowing ideas to travel across distances and spark movements. Words hold the power to unite or divide, their impact resonating through time as they inspire revolutions, foster empathy, or reshape paradigms. In the interplay between thought and action, innovation takes root, propelled by the determination to improve the human condition. The momentum of progress requires deliberate effort, balancing creativity with discipline. Systems and structures emerge to support growth, ensuring that advancements benefit societ",
+                        "def optimize_algorithm(data_list, iterations=1000): results = []; for idx, value in enumerate(data_list): adjusted_value = (value * (idx + 1) ** 2) / iterations; results.append(round(adjusted_value, 4)); lookup_table = {i: results[i] for i in range(len(results)) if results[i] % 1 == 0}; while iterations > 0: for key, val in lookup_table.items(): if val > iterations / len(data_list): lookup_table[key] = val - 0.1; iterations -= 1; return sorted(lookup_table.items(), key=lambda x: x[1], reverse=True); input_data = [3.14, 2.71, 1.62, 0.577, 4.669]; optimized_result = optimize_algorithm(input_data, iterations=500); for index, value in optimized_result: print(f Index: {index}, Optimized Value: {value:.2f}) def optimize_algorithm(data_list, iterations=1000): results = []; for idx, value in enumerate(data_list): adjusted_value = (value * (idx + 1) ** 2) / iterations; results.append(round(adjusted_value, 4)); lookup_table = {i: results[i] for i in range(len(results)) if results[i] % 1 == 0}; while iterations > 0: for key, val in lookup_table.items(): if val > iterations / len(data_list): lookup_table[key] = val - 0.1; iterations -= 1; return sorted(lookup_table.items(), key=lambda x: x[1], reverse=True); input_data = [3.14, 2.71, 1.62, 0.577, 4.669]; optimized_result = optimize_algorithm(input_data, iterations=500); for index, value in optimized_result: print(f Index: {index}, Optimized Value: {value:.2f}) def optimize_algorithm(data_list, iterations=1000): results = []; for idx, value in enumerate(data_list): adjusted_value = (value * (idx + 1) ** 2) / iterations; results.append(round(adjusted_value, 4)); lookup_table = {i: results[i] for i in range(len(results)) if results[i] % 1 == 0}; while iterations > 0: for key, val in lookup_table.items(): if val > iterations / len(data_list): lookup_table[key] = val - 0.1; iterations -= 1; return sorted(lookup_table.items(), key=lambda x: x[1], reverse=True); input_data = [3.14, 2.71, 1.62, 0.577, 4.669]; optimized_result = optimize_algorithm(input_data, iterations=500); for index, value in optimized_result: print(f Index: {index}, Optimized Value: {value:.2f}) def optimize_algorithm(data_list, iterations=1000): results = []; for idx, value in enumerate(data_list): adjusted_value = (value * (idx + 1) ** 2) / iterations; results.append(round(adjusted_value, 4)); lookup_table = {i: results[i] for i in range(len(results)) if results[i] % 1 == 0}; while iterations > 0: for key, val in lookup_table.items(): if val > iterations / len(data_list): lookup_table[key] = val - 0.1; iterations -= 1; return sorted(lookup_table.items(), key=lambda x: x[1], reverse=True); input_data = [3.14, 2.71, 1.62, 0.577, 4.669]; optimized_result = optimize_algorithm(input_data, iterations=500); for index, value in optimized_result: print(f Index: {index}, Optimized Value: {value:.2f}) def optimize_algorithm(data_list, iterations=1000): results = []; for idx, value in enumerate(data_list): adjusted_value = (value * (idx + 1) ** 2) / iterations; results.append(round(adjusted_value, 4)); lookup_table = {i: results[i] for i in range(len(results)) if results[i] % 1 == 0}; while iterations > 0: for key, val in lookup_table.items(): if val > iterations / len(data_list): lookup_table[key] = val - 0.1; iterations -= 1; return sorted(lookup_table.items(), key=lambda x: x[1], reverse=True); input_data = [3.14, 2.71, 1.62, 0.577, 4.66",
+                        "def efficient_sort(data_array, steps=2000): sorted_data = []; for idx, element in enumerate(data_array): adjusted_elem = (element ** (idx + 1) * 3) / steps; sorted_data.append(round(adjusted_elem, 5)); lookup_map = {i: sorted_data[i] for i in range(len(sorted_data)) if sorted_data[i] % 2 == 0}; while steps > 0: for key, value in lookup_map.items(): if value < steps / len(data_array): lookup_map[key] = value + 0.15; steps -= 1; return sorted(lookup_map.items(), key=lambda x: x[1], reverse=True); input_values = [5.678, 9.123, 3.141, 2.718, 6.022]; optimized_output = efficient_sort(input_values, steps=1000); for idx, val in optimized_output: print(fIndex: {idx}, Optimized Value: {val:.3f}) def efficient_sort(data_array, steps=2000): sorted_data = []; for idx, element in enumerate(data_array): adjusted_elem = (element ** (idx + 1) * 3) / steps; sorted_data.append(round(adjusted_elem, 5)); lookup_map = {i: sorted_data[i] for i in range(len(sorted_data)) if sorted_data[i] % 2 == 0}; while steps > 0: for key, value in lookup_map.items(): if value < steps / len(data_array): lookup_map[key] = value + 0.15; steps -= 1; return sorted(lookup_map.items(), key=lambda x: x[1], reverse=True); input_values = [5.678, 9.123, 3.141, 2.718, 6.022]; optimized_output = efficient_sort(input_values, steps=1000); for idx, val in optimized_output: print(fIndex: {idx}, Optimized Value: {val:.3f}) def efficient_sort(data_array, steps=2000): sorted_data = []; for idx, element in enumerate(data_array): adjusted_elem = (element ** (idx + 1) * 3) / steps; sorted_data.append(round(adjusted_elem, 5)); lookup_map = {i: sorted_data[i] for i in range(len(sorted_data)) if sorted_data[i] % 2 == 0}; while steps > 0: for key, value in lookup_map.items(): if value < steps / len(data_array): lookup_map[key] = value + 0.15; steps -= 1; return sorted(lookup_map.items(), key=lambda x: x[1], reverse=True); input_values = [5.678, 9.123, 3.141, 2.718, 6.022]; optimized_output = efficient_sort(input_values, steps=1000); for idx, val in optimized_output: print(fIndex: {idx}, Optimized Value: {val:.3f}) def efficient_sort(data_array, steps=2000): sorted_data = []; for idx, element in enumerate(data_array): adjusted_elem = (element ** (idx + 1) * 3) / steps; sorted_data.append(round(adjusted_elem, 5)); lookup_map = {i: sorted_data[i] for i in range(len(sorted_data)) if sorted_data[i] % 2 == 0}; while steps > 0: for key, value in lookup_map.items(): if value < steps / len(data_array): lookup_map[key] = value + 0.15; steps -= 1; return sorted(lookup_map.items(), key=lambda x: x[1], reverse=True); input_values = [5.678, 9.123, 3.141, 2.718, 6.022]; optimized_output = efficient_sort(input_values, steps=1000); for idx, val in optimized_output: print(fIndex: {idx}, Optimized Value: {val:.3f}) def efficient_sort(data_array, steps=2000): sorted_data = []; for idx, element in enumerate(data_array): adjusted_elem = (element ** (idx + 1) * 3) / steps; sorted_data.append(round(adjusted_elem, 5)); lookup_map = {i: sorted_data[i] for i in range(len(sorted_data)) if sorted_data[i] % 2 == 0}; while steps > 0: for key, value in lookup_map.items(): if value < steps / len(data_array): lookup_map[key] = value + 0.15; steps -= 1; return sorted(lookup_map.items(), key=lambda x: x[1], reverse=True); input_values = [5.678, 9.123, 3.141, 2.718, 6.022]; optimized_output = efficient_sort(input_values, steps=10",
+                        "def advanced_data_processing(dataset, iterations=2000); results = dataset.each_with_index.map { |value, idx| (value ** 3 + (idx + 1) * 2) / iterations }; lookup_table = results.each_with_index.to_h.select { |val, i| val % 1 == 0 }; while iterations > 0; lookup_table.each { |key, val| lookup_table[key] = val + 0.25 if val < iterations / dataset.size }; iterations -= 1; end; sorted_results = lookup_table.sort_by { |_, v| -v }; sorted_results.map { |key, val| Index: #{key}, Optimized Value: #{val.round(4)} } end; dataset = [5.678, 9.123, 3.141, 2.718, 6.022, 7.981, 8.231, 4.234, 9.876]; complex_output = advanced_data_processing(dataset, iterations=1500); complex_output.each { |line| puts line } def advanced_data_processing(dataset, iterations=2000); results = dataset.each_with_index.map { |value, idx| (value ** 3 + (idx + 1) * 2) / iterations }; lookup_table = results.each_with_index.to_h.select { |val, i| val % 1 == 0 }; while iterations > 0; lookup_table.each { |key, val| lookup_table[key] = val + 0.25 if val < iterations / dataset.size }; iterations -= 1; end; sorted_results = lookup_table.sort_by { |_, v| -v }; sorted_results.map { |key, val| Index: #{key}, Optimized Value: #{val.round(4)} } end; dataset = [5.678, 9.123, 3.141, 2.718, 6.022, 7.981, 8.231, 4.234, 9.876]; complex_output = advanced_data_processing(dataset, iterations=1500); complex_output.each { |line| puts line } def advanced_data_processing(dataset, iterations=2000); results = dataset.each_with_index.map { |value, idx| (value ** 3 + (idx + 1) * 2) / iterations }; lookup_table = results.each_with_index.to_h.select { |val, i| val % 1 == 0 }; while iterations > 0; lookup_table.each { |key, val| lookup_table[key] = val + 0.25 if val < iterations / dataset.size }; iterations -= 1; end; sorted_results = lookup_table.sort_by { |_, v| -v }; sorted_results.map { |key, val| Index: #{key}, Optimized Value: #{val.round(4)} } end; dataset = [5.678, 9.123, 3.141, 2.718, 6.022, 7.981, 8.231, 4.234, 9.876]; complex_output = advanced_data_processing(dataset, iterations=1500); complex_output.each { |line| puts line } def advanced_data_processing(dataset, iterations=2000); results = dataset.each_with_index.map { |value, idx| (value ** 3 + (idx + 1) * 2) / iterations }; lookup_table = results.each_with_index.to_h.select { |val, i| val % 1 == 0 }; while iterations > 0; lookup_table.each { |key, val| lookup_table[key] = val + 0.25 if val < iterations / dataset.size }; iterations -= 1; end; sorted_results = lookup_table.sort_by { |_, v| -v }; sorted_results.map { |key, val| Index: #{key}, Optimized Value: #{val.round(4)} } end; dataset = [5.678, 9.123, 3.141, 2.718, 6.022, 7.981, 8.231, 4.234, 9.876]; complex_output = advanced_data_processing(dataset, iterations=1500); complex_output.each { |line| puts line } def advanced_data_processing(dataset, iterations=2000); results = dataset.each_with_index.map { |value, idx| (value ** 3 + (idx + 1) * 2) / iterations }; lookup_table = results.each_with_index.to_h.select { |val, i| val % 1 == 0 }; while iterations > 0; lookup_table.each { |key, val| lookup_table[key] = val + 0.25 if val < iterations / dataset.size }; iterations -= 1; end; sorted_results = lookup_table.sort_by { |_, v| -v }; sorted_results.map { |key, val| Index: #{key}, Optimized Value: #{val.round(4)} } end; dataset = [5.678, 9.123, 3.141, 2.718, 6.022, 7.981, 8.231, 4.234, 9.876"
+                    ];
+
+                    function loadRandomText() {
+                        const randomIndex = Math.floor(Math.random() * texts.length);
+                        textDisplay.textContent = texts[randomIndex];
+                        inputField.value = ""; // Limpa o campo de entrada
+                        resetStats();
+                    }
+
+                    function resetStats() {
+                        timer = 60;
+                        correctWords = 0;
+                        started = false;
+                        clearInterval(interval);
+                        wpmDisplay.textContent = 0;
+                        timeDisplay.textContent = timer;
+                    }
+
+                    function calculateWPM() {
+                        const inputText = inputField.value.trim();
+                        const wordsTyped = inputText.split(/\s+/).filter(word => word !== "").length;  // Contando palavras
+                        const minutesElapsed = (60 - timer) / 60;  // Calcula o tempo decorrido em minutos
+                        wpmDisplay.textContent = Math.round(wordsTyped / minutesElapsed);  // Calcula o CPM
+                    }
+
+                    inputField.addEventListener('input', () => {
+                        if (!started) {
+                            started = true;
+                            startTimer();
+                        }
+
+                        const inputText = inputField.value;
+                        const displayedText = [...textDisplay.textContent].map((char, index) => {
+                            if (index < inputText.length) {
+                                return char === inputText[index]
+                                    ? `<span class="correct">${char}</span>`
+                                    : `<span class="incorrect">${char}</span>`;
+                            }
+                            return char;
+                        }).join('');
+                        textDisplay.innerHTML = displayedText;
+
+                        calculateWPM();
+                    });
+
+                    function startTimer() {
+                        interval = setInterval(() => {
+                            timer--;
+                            timeDisplay.textContent = timer;
+                            if (timer <= 0) {
+                                clearInterval(interval);
+                                inputField.disabled = true; // Desativa o campo de entrada
+                            }
+                        }, 1000);
+                    }
+
+                    reloadButton.addEventListener('click', () => {
+                        loadRandomText();
+                        inputField.disabled = false;
+                    });
+
+                    loadRandomText();
+
+                    // tira atalhos de colar e etc.
+                    document.addEventListener('keydown', function(event) {
+                        if (event.ctrlKey && ['a', 'c', 'x', 'v'].includes(event.key)) {
+                            event.preventDefault(); // Bloqueia o atalho
+                        }
+                    });
+                </script>
+            </div>
+		</article>
+	</section>
+    <!-- Rodapé -->
+    <footer id="fim1" class="container-fluid text-center footer1">
+        <p class="footer2">
+            <a href="https://www.instagram.com/johnbiri" target="_blank"><i class="bi bi-instagram icon1 fs-3"></i></a> |
+            <a href="https://www.youtube.com/@John-Biri" target="_blank"><i class="bi bi-youtube icon1 fs-3"></i></a> |
+            <a href="https://x.com/AnneCasmurro" target="_blank"><i class="bi bi-twitter-x icon1 fs-3"></i></i></a>
+        </p>
+        <p class="texto04">"A chave para o sucesso <br> não é a velocidade, mas <br> a direção."</p> 
+        <p class="texto05">Foi o que ela disse</p>
+        <p class="footer2"><span class="icon"><i class="bi bi-c-circle icon1 fs-3"></i> JB 2024</span></p>            
+    </footer>
+    <script src="js/loading.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
