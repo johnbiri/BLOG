@@ -35,9 +35,23 @@
     border-radius: 5px;
     border: solid 1px #222;
 }
-
 /* Efeito ao passar o mouse */
 .botao01:hover {
     border: solid 1px #a300c8;
+    background-color: #111;
+}
+.botao02 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+    color: white;
+    font-size: 16px;
+    background-color: #000;
+    border-radius: 5px;
+    border: solid 1px #222;
+}
+.botao02:hover {
+    border: solid 1px #124c6d;
     background-color: #111;
 }
