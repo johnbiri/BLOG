@@ -26,6 +26,26 @@
                 <li class="nav-item">
                     <a class="nav-link text-white" aria-current="page" href="#carousel2"><i class="bi bi-card-image icon1 fs-4"></i> Imagens</a>
                 </li>
+				<audio id="meuSom" src="assets/aud/click.mp3" preload="auto"></audio>
+				<script>
+                    document.querySelectorAll('.nav-link').forEach(function(button) {
+                    button.addEventListener('click', function(e) {
+                        var audio = document.getElementById('meuSom');
+                        e.preventDefault();  // Evita o redirecionamento do link
+                        audio.play().then(() => {
+                        // Verifica se o href está definido e redireciona
+                        var link = e.target.getAttribute('href');
+                        if (link) {
+                            setTimeout(() => {
+                            window.location.href = link;
+                            }, audio.duration * 1500);  // Espera o tempo do áudio
+                        }
+                        }).catch((error) => {
+                        console.log("Erro ao tocar o áudio:", error);
+                        });
+                    });
+                    });
+				</script>
 			  </ul>
 			</div>
 		  </div>

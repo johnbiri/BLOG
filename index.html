@@ -32,6 +32,26 @@
 				<li class="nav-item">
 					<a class="nav-link text-white" href="#" data-bs-toggle="modal" data-bs-target="#modaljogos"><i class="bi bi-dpad icon1 fs-2"></i> Jogos</a>
 				</li>
+				<audio id="meuSom" src="assets/aud/click.mp3" preload="auto"></audio>
+				<script>
+                    document.querySelectorAll('.nav-link').forEach(function(button) {
+                    button.addEventListener('click', function(e) {
+                        var audio = document.getElementById('meuSom');
+                        e.preventDefault();  // Evita o redirecionamento do link
+                        audio.play().then(() => {
+                        // Verifica se o href está definido e redireciona
+                        var link = e.target.getAttribute('href');
+                        if (link) {
+                            setTimeout(() => {
+                            window.location.href = link;
+                            }, audio.duration * 1500);  // Espera o tempo do áudio
+                        }
+                        }).catch((error) => {
+                        console.log("Erro ao tocar o áudio:", error);
+                        });
+                    });
+                    });
+				</script>
 			  </ul>
 			</div>
 		  </div>
@@ -172,31 +192,42 @@
 				</div>
 				<div class="modal-body modal1">
 					<div>
-						<a href="003.html" target="_blank" class="btn d-block mb-2 d-flex align-items-center botao00">
+						<a href="003.html" target="_self" class="btn d-block mb-2 d-flex align-items-center botao00">
 							<i class="bi bi-keyboard fs-3 me-2"></i> Faster (Digitação)
 						</a>
-						<a href="https://johnbiri.github.io/ETH/" target="_blank" class="btn d-block mb-2 d-flex align-items-center botao00">
+						<a href="https://johnbiri.github.io/ETH/" target="_self" class="btn d-block mb-2 d-flex align-items-center botao00">
 							<i class="bi bi-link-45deg fs-3 me-2"></i> Links
 						</a>
-						<a href="assets/Konga/index.html" target="_blank" class="btn d-block mb-2 d-flex align-items-center botao00">
+						<a href="assets/Konga/index.html" target="_self" class="btn d-block mb-2 d-flex align-items-center botao00">
 							<i class="bi bi-music-note-beamed fs-3 me-2"></i> Dança Gatinho!
 						</a>
-						<a href="002.html#player" target="_blank" class="btn d-block mb-2 d-flex align-items-center botao00">
+						<a href="002.html#player" target="_self" class="btn d-block mb-2 d-flex align-items-center botao00">
 							<i class="bi bi-play-btn-fill fs-3 me-2"></i> Andarilhoteca (AM)
 						</a>
-						<a href="001.html#carousel2" target="_blank" class="btn d-block mb-2 d-flex align-items-center botao00">
+						<a href="001.html#carousel2" target="_self" class="btn d-block mb-2 d-flex align-items-center botao00">
 							<i class="bi bi-card-image fs-3 me-2"></i> Galeria (Poesias)
 						</a>
-						<a href="https://johnbiri.github.io/portfolio/" target="_blank" class="btn d-block mb-2 d-flex align-items-center botao00">
+						<a href="https://johnbiri.github.io/portfolio/" target="_self" class="btn d-block mb-2 d-flex align-items-center botao00">
 							<i class="bi bi-file-earmark-person fs-3 me-2"></i> Portfólio
 						</a>
 						<audio id="meuSom" src="assets/aud/click.mp3" preload="auto"></audio>
 						<script>
 							document.querySelectorAll('.botao00').forEach(function(button) {
-								button.addEventListener('click', function() {
-									var audio = document.getElementById('meuSom'); // Referência ao elemento de áudio
-									audio.play(); // Toca o som quando o botão é clicado
+							button.addEventListener('click', function(e) {
+								var audio = document.getElementById('meuSom');
+								e.preventDefault();  // Evita o redirecionamento do link
+								audio.play().then(() => {
+								// Verifica se o href está definido e redireciona
+								var link = e.target.getAttribute('href');
+								if (link) {
+									setTimeout(() => {
+									window.location.href = link;
+									}, audio.duration * 1500);  // Espera o tempo do áudio
+								}
+								}).catch((error) => {
+								console.log("Erro ao tocar o áudio:", error);
 								});
+							});
 							});
 						</script>
 					</div>
