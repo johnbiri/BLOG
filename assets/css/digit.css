@@ -1,0 +1,43 @@
+.correct {
+    color: rgb(70, 128, 70);
+    font-family: monospace, 'Courier New', Courier;
+}
+
+.incorrect {
+    color: rgb(255, 91, 91);
+    font-family: monospace, 'Courier New', Courier;
+}
+input {
+    width: 0px;
+    background-color: transparent;
+    color: transparent;
+    border: solid transparent 1px;
+    outline: none;
+}
+#text-display {
+    width: 70%;
+    color: #333;
+    padding: 10px;
+    font-family: monospace, 'Courier New', Courier;
+}
+
+@media (max-width: 768px) {
+    #text-display {
+        width: 100%;
+    }
+}
+.areaDigitar {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column; /* Coloca os itens abaixo do outro */
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center;     /* Centraliza verticalmente */
+    font-size: 18px;
+}
+#stats {
+    display: none;
+}
+#reload {
+    display: none;
+}
