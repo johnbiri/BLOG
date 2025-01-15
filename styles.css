@@ -3,7 +3,6 @@
 	padding: 0;
 	box-sizing: border-box;
 	color: #fff;
-	font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 html{
 	scroll-behavior: smooth;
@@ -46,6 +45,7 @@ body::-webkit-scrollbar {
 /* formatação de textos */
 .texto04 {
     color: #777;
+	font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 .texto05 {
     color: #ff0;
@@ -156,45 +156,46 @@ body::-webkit-scrollbar {
 	height: 100%;
 	margin: 0 auto;
   }
-  
-  .modal-content {
+.modal-content {
 	width: 90%;
 	max-width: 800px; /* Limita o tamanho no desktop */
 	background-color: #000; /* Fundo escuro para o player */
 	border-radius: 10px; /* Bordas arredondadas */
 	padding: 15px;
 	box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
-  }  
-
-
+  }
 .header1 {
 	background-color: #000; /* Cor de fundo escuro do header */
 	color: white;
-	padding: 15px 0;
+	padding: 0px 0;
 	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
   }
-  
-  
-  .nav-link {
-	letter-spacing: 1px;
+.nav-link {
+	font-family: monospace, 'Courier New', Courier;
+	letter-spacing: 2px;
+	height: 60px;
 	text-transform: uppercase;
 	font-weight: 900;
-	padding: 10px 15px;
 	margin: 3px;
 	display: flex;
 	align-items: center;
-	transition: background-color 0.3s;
-	border-radius: 5px;
+	background-color: #111;
+	border-radius: 2px;
+	border: solid #222 1px;
+	transition: 0.3s;
   }
-  
-  .nav-link:hover {
-	background-color: #222; /* Cor de hover para links */
-  }
-  
-  .navbar-nav {
+.nav-link:hover {
+	background-color: #222;
+	border: solid #a300c8 1px;
+	transition: 0.3s;
+}
+.nav-link:focus {
+	outline: none;
+}
+.navbar-nav {
 	flex-direction: column;
 	justify-content: center; /* Centraliza os itens horizontalmente */
-  }
+}
 /* carrossel */
 .carousel-indicators img{
 	width: 70px;
@@ -221,4 +222,10 @@ body::-webkit-scrollbar {
 	background-color: #500078;
 	border: #a300c8 solid 1px;
 
+}
+.nao-interativo {
+	pointer-events: none; /* Impede qualquer interação com o elemento */
+	user-select: none;    /* Impede seleção do texto */
+	cursor: default;      /* Mostra um cursor padrão sem ação */
+	outline: none;
 }
