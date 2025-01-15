@@ -129,9 +129,16 @@ body::-webkit-scrollbar {
 	100% { transform: rotate(360deg); }
   }
   
-  /* Esconder o conteúdo da página até o carregamento completo */
+/* Esconder o conteúdo da página até o carregamento completo */
   #content {
 	display: none;
+}
+/* cabeçalho */
+.navbar-brand {
+	pointer-events: none;
+	user-select: none; 
+	cursor: default;
+	outline: none;
 }
 .header1 {
 	background-color: #000; /* Cor de fundo escuro do header */
