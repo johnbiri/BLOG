@@ -27,20 +27,13 @@ body::-webkit-scrollbar {
 	padding: 0px;
     border: #000 1px solid;
 }
-.artigo1 {
-    background-color: #000;
-	margin: 0px;
-	padding: 0px;
-	border-radius: 0px;
-	text-align: left;
-	border-top: #666 1px solid;
-}
 .artigo2 {
     background-color: #000;
 	margin: 0px;
 	padding-top: 0px;
 	border-radius: 5px;
 	text-align: left;
+    border: #777 1px solid;
 }
 /* formatação de textos */
 .texto04 {
@@ -91,8 +84,8 @@ body::-webkit-scrollbar {
 }
 /* footer */
 .footer1{
-	padding-top: 200px;
-	padding-bottom: 50px;
+	padding-top: 10px;
+	padding-bottom: 10px;
 	border: #000 solid 1px;
 	background-color: #000;
 	font-size: 12px;

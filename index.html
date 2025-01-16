@@ -15,47 +15,38 @@
 <body>
 	<!-- Cabeçalho -->
 	<header class="container-fluid p-2 text-center header1">
-		<nav class="navbar navbar-expand-lg header1">
-		  <div class="container-fluid">
-			<a class="navbar-brand" href="#"><img src="img/ico/icon-512x512.png" alt="ico" style="width: 40px; height: 40px;"></a>
-			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-				<i class="header-toggle d-xl-none bi bi-list fs-1"></i>
-			</button>
-			<div class="collapse navbar-collapse justify-content-end header1" id="navbarSupportedContent">
-			  <ul class="navbar-nav">
-				<li class="nav-item">
-				  <a class="nav-link text-white" aria-current="page" href="#"><i class="bi bi-house icon1 fs-4"></i> Home</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link text-white" href="#" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="bi bi-building-gear icon1 fs-4"></i> Projetos</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link text-white" href="#" data-bs-toggle="modal" data-bs-target="#modaljogos"><i class="bi bi-dpad icon1 fs-2"></i> Jogos</a>
-				</li>
-				<audio id="meuSom" src="assets/aud/click.mp3" preload="auto"></audio>
-				<script>
-                    document.querySelectorAll('.nav-link').forEach(function(button) {
-                    button.addEventListener('click', function(e) {
-                        var audio = document.getElementById('meuSom');
-                        e.preventDefault();  // Evita o redirecionamento do link
-                        audio.play().then(() => {
-                        // Verifica se o href está definido e redireciona
-                        var link = e.target.getAttribute('href');
-                        if (link) {
-                            setTimeout(() => {
-                            window.location.href = link;
-                            }, audio.duration * 1500);  // Espera o tempo do áudio
-                        }
-                        }).catch((error) => {
-                        console.log("Erro ao tocar o áudio:", error);
-                        });
-                    });
-                    });
-				</script>
-			  </ul>
-			</div>
+	  <nav class="navbar navbar-expand-lg header1">
+		<div class="container-fluid">
+		  <!-- Logo -->
+		  <a class="navbar-brand" href="#">
+			<img src="img/ico/icon-512x512.png" alt="Ícone do site" class="logo" width="40" height="40">
+		  </a>
+		  <!-- Botão de toggle -->
+		  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Alternar navegação">
+			<i class="header-toggle d-xl-none bi bi-list fs-1"></i>
+		  </button>
+		  <!-- Links do menu -->
+		  <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+			<ul class="navbar-nav">
+			  <li class="nav-item">
+				<a class="nav-link text-white" href="#" aria-current="page">
+				  <i class="bi bi-house icon1 fs-4"></i> Home
+				</a>
+			  </li>
+			  <li class="nav-item">
+				<a class="nav-link text-white" href="#" data-bs-toggle="modal" data-bs-target="#exampleModal">
+				  <i class="bi bi-building-gear icon1 fs-4"></i> Projetos
+				</a>
+			  </li>
+			  <li class="nav-item">
+				<a class="nav-link text-white" href="#" data-bs-toggle="modal" data-bs-target="#modaljogos">
+				  <i class="bi bi-dpad icon1 fs-2"></i> Jogos
+				</a>
+			  </li>
+			</ul>
 		  </div>
-		</nav>
+		</div>
+	  </nav>
 	</header>
 	<!-- Tela de carregamento -->
 	<div id="loading-screen">
@@ -66,9 +57,6 @@
 			<article class="artigo2">
 				<div>
 					<!-- <h1><i class="bi bi-chat-left-text icon1 fs-1"></i> Atualizações</h1> -->
-				</div>
-				<div>
-					<br>
 					<p class="texto04">
 						<strong class="texto04">Diário de Estudos - #002</strong>
 					</p>
@@ -176,7 +164,8 @@
 	</footer>
 	<!-- Scripts do site -->
 	<script src="scripts.js"></script>
-	<script src="js/loading.js"></script>
+	<script src="assets/js/loading.js"></script>
+	<script src="assets/js/sons.js"></script>
 	<!-- Scripts de bibliotecas externas -->
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" 
 			integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" 
@@ -210,26 +199,6 @@
 						<a href="https://johnbiri.github.io/portfolio/" target="_self" class="btn d-block mb-2 d-flex align-items-center botao00">
 							<i class="bi bi-file-earmark-person fs-3 me-2"></i> Portfólio
 						</a>
-						<audio id="meuSom" src="assets/aud/click.mp3" preload="auto"></audio>
-						<script>
-							document.querySelectorAll('.botao00').forEach(function(button) {
-							button.addEventListener('click', function(e) {
-								var audio = document.getElementById('meuSom');
-								e.preventDefault();  // Evita o redirecionamento do link
-								audio.play().then(() => {
-								// Verifica se o href está definido e redireciona
-								var link = e.target.getAttribute('href');
-								if (link) {
-									setTimeout(() => {
-									window.location.href = link;
-									}, audio.duration * 1500);  // Espera o tempo do áudio
-								}
-								}).catch((error) => {
-								console.log("Erro ao tocar o áudio:", error);
-								});
-							});
-							});
-						</script>
 					</div>
 				</div>
 				<div class="modal-footer modal1">

@@ -26,26 +26,6 @@
                 <li class="nav-item">
                     <a class="nav-link text-white" aria-current="page" href="#carousel2"><i class="bi bi-card-image icon1 fs-4"></i> Imagens</a>
                 </li>
-				<audio id="meuSom" src="assets/aud/click.mp3" preload="auto"></audio>
-				<script>
-                    document.querySelectorAll('.nav-link').forEach(function(button) {
-                    button.addEventListener('click', function(e) {
-                        var audio = document.getElementById('meuSom');
-                        e.preventDefault();  // Evita o redirecionamento do link
-                        audio.play().then(() => {
-                        // Verifica se o href está definido e redireciona
-                        var link = e.target.getAttribute('href');
-                        if (link) {
-                            setTimeout(() => {
-                            window.location.href = link;
-                            }, audio.duration * 1500);  // Espera o tempo do áudio
-                        }
-                        }).catch((error) => {
-                        console.log("Erro ao tocar o áudio:", error);
-                        });
-                    });
-                    });
-				</script>
 			  </ul>
 			</div>
 		  </div>
@@ -108,7 +88,8 @@
 		<p class="footer2"><span class="icon"><i class="bi bi-c-circle icon1 fs-3"></i> JB 2024</span></p>			
 	</footer>
 	<script src="scripts.js"></script>
-	<script src="js/loading.js"></script>
+	<script src="assets/js/loading.js"></script>
+	<script src="assets/js/sons.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>
