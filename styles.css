@@ -3,6 +3,7 @@
 	padding: 0;
 	box-sizing: border-box;
 	color: #fff;
+	border: solid transparent 0px;
 }
 html{
 	scroll-behavior: smooth;
@@ -25,15 +26,13 @@ body::-webkit-scrollbar {
 /* formatação de artigo */
 .secao1 {
 	padding: 0px;
-    border: #000 1px solid;
 }
 .artigo2 {
     background-color: #000;
 	margin: 0px;
-	padding-top: 0px;
-	border-radius: 5px;
+	padding: 0px;
+	border-radius: 0px;
 	text-align: left;
-    border: #777 1px solid;
 }
 /* formatação de textos */
 .texto04 {
@@ -86,7 +85,6 @@ body::-webkit-scrollbar {
 .footer1{
 	padding-top: 10px;
 	padding-bottom: 10px;
-	border: #000 solid 1px;
 	background-color: #000;
 	font-size: 12px;
 }
@@ -138,6 +136,7 @@ body::-webkit-scrollbar {
 	color: white;
 	padding: 0px 0;
 	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+	border-radius: 2px;
   }
 .nav-link {
 	font-family: monospace, 'Courier New', Courier;

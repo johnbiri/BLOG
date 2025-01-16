@@ -13,31 +13,45 @@ input {
     color: transparent;
     border: solid transparent 1px;
     outline: none;
+    height: 0px;
 }
 #text-display {
-    width: 70%;
+    width: 100%;
+    padding: 220px;
     color: #333;
-    padding: 10px;
     font-family: monospace, 'Courier New', Courier;
+    border: solid transparent 1px;
 }
 
 @media (max-width: 768px) {
     #text-display {
         width: 100%;
+        padding: 5px;
     }
 }
 .areaDigitar {
     margin: 0;
-    padding: 0;
+    padding: 5px;
     display: flex;
     flex-direction: column; /* Coloca os itens abaixo do outro */
     justify-content: center; /* Centraliza horizontalmente */
     align-items: center;     /* Centraliza verticalmente */
     font-size: 18px;
 }
-#stats {
+#status {
     display: none;
 }
-#reload {
+#time {
     display: none;
+}
+#wpm {
+    display: none;
+}
+.btnaba {
+    margin-bottom: 100px;
+}
+@media (max-width: 768px) {
+    .btnaba {
+        margin-bottom: 10px;
+    }
 }

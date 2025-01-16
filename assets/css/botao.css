@@ -1,11 +1,13 @@
 .botao00 {
     background-color: #000; /* Cor de fundo escura */
-    color: #FFFFFF; /* Cor do texto */
+    color: #555; /* Cor do texto */
     border: 1px solid #222; /* Borda sutil */
+    margin: 10px;
     padding: 12px 24px; /* Espaçamento interno */
     border-radius: 8px; /* Cantos arredondados */
     font-size: 14px;
     font-weight: 500;
+    text-decoration: none;
     transition: background-color 0.3s, transform 0.2s;
     display: inline-block;
     text-align: center;

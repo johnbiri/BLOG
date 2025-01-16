@@ -10,6 +10,7 @@
 	<link rel="stylesheet" type="text/css" href="styles.css">
 	<link rel="stylesheet" type="text/css" href="assets/css/modal.css">
 	<link rel="stylesheet" type="text/css" href="assets/css/digit.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/botao.css">
 	<link rel="manifest" href="assets/manifest.json">
 </head>
 <body>
@@ -38,23 +39,22 @@
 	<div class="spinner"></div>
 	</div>
 	<!-- Artigo, Conteúdo -->
-	<section class="container-fluid text-center p-2 secao1">
-			<!-- caso eu queira usar o título nessa seção -->
-			<!-- <h1>BLOG</h1> -->
+	<section class="container-fluid text-center secao1">
 			<article class="artigo2">
-                <!-- projeto de digitação -->
                 <div id="dig" class="areaDigitar">
 
-                    <input class="nao-interativo" type="text" id="input" placeholder="" autofocus spellcheck="false" autocomplete="off"/>
+                    <div id="stats">
+                        <span id="time">60</span>
+                        <span id="wpm">0</span>
+                    </div>
 
-                    <button id="reload"></button>
+                    <input class="nao-interativo" type="text" id="input" placeholder="" spellcheck="false" autocomplete="off"/>
 
                     <div class="nao-interativo" id="text-display">Carregando texto...</div>
 
-
-                    <div id="stats">
-                        <p><span id="time">60</span> - <span id="wpm">0</span></p>
-                    </div>
+                    <button class="botao00" id="reload"><i class="bi bi-keyboard fs-3"></i></button>
+                    <div class="btnaba"><!-- espaçamento --></div>
+                    <a class="botao00" href="#player"><i class="bi bi-play-btn-fill fs-3"></i></a>
 
                     <script>
                         const textDisplay = document.getElementById('text-display');
@@ -190,9 +190,24 @@
 
                             inputField.addEventListener('input', handleInput);
                         });
+
+                        document.getElementById('reload').addEventListener('click', function() {
+                            document.getElementById('input').focus();
+                        });
                     </script>
                     
                 </div>
+                <div id="player" class="ratio ratio-16x9 vid00">
+					<iframe 
+						class="vid01"
+						src="https://www.youtube.com/embed/videoseries?list=PLd9ykfMeym3jlEkuEFdZM7cqUl_G3moVp&autoplay=1&mute=0&controls=1&rel=0&start=0&modestbranding=1&playsinline=0&fs=1"
+						title="Youtube Playlist"
+						frameborder="0" 
+						allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+						referrerpolicy="strict-origin-when-cross-origin" 
+						allowfullscreen>
+					</iframe>
+				</div>
 			</article>
 		<!-- Alguns comentários para ajudar a busca -->
 	</section>
@@ -216,13 +231,9 @@
 <div class="modal fade" id="resultModal" tabindex="-1" aria-labelledby="resultModalLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content modal2">
-        <div class="modal-header modal1">
-          <h5 class="modal-title fs-5 texto-06" id="resultModalLabel">Resultado</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
         <div class="modal-body modal1">
             <p class="texto06">
-                Você digitou <span class="texto06" id="final-wpm">0</span> palavras por minuto!
+                Palavras por minuto: <span class="texto06" id="final-wpm">0</span>
             </p>
             <img src="img/jpg/04.jpg" alt="teclado" style="max-width: 100%; max-height: 100%; object-fit: contain;">
         </div>
