@@ -3,9 +3,18 @@ document.addEventListener('DOMContentLoaded', () => {
     const button = document.querySelector('.navbar-toggler');
     if (button) {
         const clickSound = new Audio('assets/aud/click.mp3');
+        let clickCount = 0; // Contador de cliques
+
         button.addEventListener('click', () => {
-            clickSound.currentTime = 0; // Reseta o áudio para o início
-            clickSound.play();         // Toca o áudio
+            clickCount++; // Incrementa o contador
+            if (clickCount <= 20) {
+                clickSound.currentTime = 0; // Reseta o áudio para o início
+                clickSound.play();         // Toca o áudio
+            } else if (clickCount === 21) {
+                // Troca para o novo som e toca apenas uma vez
+                const alertSound = new Audio('assets/audio/alert.mp3');
+                alertSound.play();
+            }
         });
     }
 });
