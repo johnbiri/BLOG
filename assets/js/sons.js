@@ -18,20 +18,28 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 });
-// Adiciona som ao clique no botão toggle, garantindo que o botão exista
+// Adiciona som de links
 document.addEventListener('DOMContentLoaded', () => {
-    const button = document.querySelector('.link00');
-    if (button) {
-        const clickSound = new Audio('assets/aud/click.mp3');
-        button.addEventListener('click', (event) => {
-            event.preventDefault(); // Impede o redirecionamento imediato
-            clickSound.currentTime = 0; // Reseta o áudio para o início
-            clickSound.play(); // Toca o áudio
+    const buttons = document.querySelectorAll('.link00');
+    
+    buttons.forEach(button => {
+        if (button) {
+            const clickSound = new Audio('assets/aud/click.mp3');
             
-            // Aguarda o tempo do áudio antes de redirecionar
-            setTimeout(() => {
-                window.location.href = button.href; // Redireciona para o link
-            }, clickSound.duration * 1000); // Tempo em milissegundos
-        });
-    }
+            button.addEventListener('click', (event) => {
+                event.preventDefault(); // Impede o redirecionamento imediato
+                clickSound.currentTime = 0; // Reseta o áudio para o início
+                clickSound.play(); // Toca o áudio
+
+                // Aguarda o tempo do áudio antes de redirecionar
+                setTimeout(() => {
+                    if (button.target === "_blank") {
+                        window.open(button.href, '_blank'); // Abre em nova aba
+                    } else {
+                        window.location.href = button.href; // Abre na mesma aba
+                    }
+                }, clickSound.duration * 1000); // Tempo em milissegundos
+            });
+        }
+    });
 });
