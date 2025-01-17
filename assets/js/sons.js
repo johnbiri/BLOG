@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 clickSound.play();         // Toca o áudio
             } else if (clickCount === 21) {
                 // Troca para o novo som e toca apenas uma vez
-                const alertSound = new Audio('assets/audio/alert.mp3');
+                const alertSound = new Audio('assets/aud/alert.mp3');
                 alertSound.play();
             }
         });
