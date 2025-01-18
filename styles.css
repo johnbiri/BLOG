@@ -46,12 +46,22 @@ body::-webkit-scrollbar {
 .texto06 {
     color: #0f0;
 }
+/* Estilo padrão para os links */
 .link00 {
-    color: #a300c8;
-	text-decoration: none;
+	font-family: monospace;
+    color: #666;
+    border: solid #222 1px;
+	background-color: #111;
+    padding: 3px;
+    text-decoration: none;
+	border-radius: 5px;
 }
-.link00:hover {
-	text-decoration: underline;
+/* Alterações quando o usuário passa o mouse ou clica */
+.link00:hover,
+.link00:focus,
+.link00:active {
+	background-color: #222;
+	border: solid #666 1px;
 }
 /* formatação de vídeos da página */
 .vid00 {
@@ -64,11 +74,11 @@ body::-webkit-scrollbar {
 	height: 100%;
 }
 /* Imagens */
-.img01{
+.img01 {
 	margin-right: 8px;
 	padding: 0px;
 	width: 100px;}
-.img02{
+.img02 {
 	width: 100%; 
 	max-width: 600px;
 	display: block;
