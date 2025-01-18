@@ -1,7 +1,13 @@
 /* formatação de modal */
-.modal1,
+.modal1 {
+    background-color: #000;
+	border: #000 solid 1px;
+	padding: 0px;
+	margin: 20px;
+}
 .modal2 {
-    background-color: transparent;
+	background-color: #000;
+	border: #a300c8 1px solid;
 }
 .modal-dialog {
 	display: flex;
