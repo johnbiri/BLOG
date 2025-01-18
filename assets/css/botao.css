@@ -1,0 +1,19 @@
+.botao00 {
+    border: solid transparent 1px;
+    background-color: #000; /* Cor de fundo escura */
+    padding: 10px;
+    margin: 10px;
+    border-radius: 5px; /* Cantos arredondados */
+    font-weight: 500;
+    text-decoration: none;
+    transition: background-color 0.3s, transform 0.2s;
+    display: inline-block;
+    text-align: center;
+    cursor: pointer;
+}
+
+.botao00:hover, 
+.botao00:active, 
+.botao00:focus {
+    border: solid #fff 1px;
+}
