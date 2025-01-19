@@ -38,13 +38,25 @@ body::-webkit-scrollbar {
 .texto04 {
     color: #777;
 	font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+	pointer-events: none;
+	user-select: none;
+	cursor: default;
+	outline: none;
 }
 .texto05 {
     color: #ff0;
 	text-decoration: underline;
+	pointer-events: none;
+	user-select: none;
+	cursor: default;
+	outline: none;
 }
 .texto06 {
     color: #0f0;
+	pointer-events: none;
+	user-select: none;
+	cursor: default;
+	outline: none;
 }
 /* Estilo padrão para os links */
 .link00 {
@@ -77,7 +89,12 @@ body::-webkit-scrollbar {
 .img01 {
 	margin-right: 8px;
 	padding: 0px;
-	width: 100px;}
+	width: 100px;
+	pointer-events: none;
+	user-select: none;
+	cursor: default;
+	outline: none;
+}
 .img02 {
 	width: 100%; 
 	max-width: 600px;
@@ -85,6 +102,10 @@ body::-webkit-scrollbar {
 	margin: 0 auto; /* Centraliza a imagem horizontalmente */
 	max-width: 100%;
 	height: auto;
+	pointer-events: none;
+	user-select: none;
+	cursor: default;
+	outline: none;
 }
 .icon1 {
     vertical-align: middle;
