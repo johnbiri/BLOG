@@ -3,3 +3,6 @@ if ('serviceWorker' in navigator) {
     .then(() => console.log('Service Worker registrado!'))
     .catch(err => console.error('Erro ao registrar o Service Worker:', err));
 }
+
+/* pega o ano atual */
+document.getElementById("current-year").textContent = new Date().getFullYear();
